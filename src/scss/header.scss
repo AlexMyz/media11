@@ -1,0 +1,60 @@
+.header {
+  &__above {
+    display: flex;
+    justify-content: end;
+    padding: 10px 82px;
+
+    & a {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__under {
+    background-color: #13120D;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding: 21px 0;
+  }
+
+  &__menu {}
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  & li {
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    & a {
+      color: #F7F6F4;
+      text-transform: uppercase;
+      font-family: 'Oswald';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      position: relative;
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 32px;
+        width: 100%;
+        height: 2px;
+        background-color: #FADA2B;
+        transition: all 0.5s ease 0s;
+      }
+    }
+  }
+}
