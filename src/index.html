@@ -7,7 +7,14 @@
   <div class="wrapper">
     @@include('html/header.html', {})
     <main class="page">
-    
+      <div class="page__container">
+        <div class="page__column">
+          @@include('html/main.html', {})
+        </div>
+        <div class="page__column">
+          @@include('html/aside.html', {})
+        </div>
+      </div>
     </main>
     @@include('html/footer.html', {})
   </div>

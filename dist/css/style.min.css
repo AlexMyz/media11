@@ -61,6 +61,10 @@ button::-moz-focus-inner {
   border: 0;
 }
 
+a {
+  color: inherit;
+}
+
 a,
 a:visited {
   text-decoration: none;
@@ -147,6 +151,329 @@ h6 {
 
 .page {
   flex: 1 1 auto;
+  padding: 35px 0 0 0;
+}
+.page__container {
+  display: flex;
+}
+.page__column:not(:last-child) {
+  margin: 0 40px 0 0;
+}
+
+.main__main-block {
+  margin-bottom: 60px;
+}
+.main__featured {
+  margin-bottom: 80px;
+}
+.main__sociall {
+  margin-bottom: 60px;
+}
+.main__news {
+  margin-bottom: 60px;
+}
+.main__vodeo {
+  margin-bottom: 60px;
+}
+.main__lifestyle {
+  margin-bottom: 135px;
+}
+
+.main-post > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.main-post__poster {
+  position: relative;
+  padding: 283px 230px 30px 0;
+}
+.main-post__tag {
+  position: relative;
+  z-index: 2;
+  width: 190px;
+  padding: 5px 55px;
+}
+.main-post__tag div {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 40px solid #FADA2B;
+  border-right: 10px solid transparent;
+}
+.main-post__tag span {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #13120D;
+  position: relative;
+  z-index: 2;
+}
+.main-post__title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 59px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FADA2B;
+  position: relative;
+  z-index: 2;
+  padding: 30px 0 0 40px;
+}
+.main-post__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.main-post__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.main-post__category {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FADA2B;
+}
+.main-post__text {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #13120D;
+}
+.main-post__meta {
+  display: flex;
+  align-items: center;
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(19, 18, 13, 0.4862745098);
+}
+.main-post__meta > div:not(:last-child) {
+  margin-right: 12px;
+}
+.main-post__separator {
+  width: 2px;
+  height: 2px;
+  background: rgba(19, 18, 13, 0.4862745098);
+  border-radius: 50%;
+}
+.block-posts__title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 47px;
+  letter-spacing: -0.01em;
+  color: #13120D;
+  margin-bottom: 30px;
+}
+.block-posts__main-post {
+  margin-bottom: 40px;
+}
+.block-posts__post-list {
+  margin-bottom: 80px;
+}
+.post-list__post-single:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.post-single {
+  display: flex;
+}
+.post-single__img {
+  position: relative;
+  flex: 0 0 45%;
+  min-height: 266px;
+  margin-right: 40px;
+}
+.post-single__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.post-single__content {
+  padding: 22px 0 0 0;
+}
+.post-single__category {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FADA2B;
+  margin-bottom: 10px;
+}
+.post-single__title {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #13120D;
+  margin-bottom: 10px;
+}
+.post-single__text {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #13120D;
+  margin-bottom: 20px;
+}
+.post-single__meta {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(19, 18, 13, 0.4862745098);
+  display: flex;
+  align-items: center;
+}
+.post-single__meta > div:not(:last-child) {
+  margin-right: 12px;
+}
+.post-single__separator {
+  width: 2px;
+  height: 2px;
+  background: rgba(19, 18, 13, 0.4862745098);
+  border-radius: 50%;
+}
+.button-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-more a {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #13120D;
+  border: 1px solid #13120D;
+  border-radius: 50px;
+  padding: 8px 18px;
+}
+
+.social-main {
+  display: flex;
+  padding: 30px 80px 30px 55px;
+  background: rgba(250, 218, 43, 0.15);
+  border-radius: 5px;
+}
+.social-main__title {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #13120D;
+  margin-bottom: 15px;
+}
+.social-main__text {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #13120D;
+  opacity: 0.7;
+}
+.post-list-grid {
+  display: grid;
+  grid-template: 50% 50%/50% 50%;
+  grid-gap: 40px;
+}
+.post-grid {
+  position: relative;
+}
+.post-grid__img {
+  position: relative;
+  padding: 0 0 70% 0;
+  overflow: hidden;
+}
+.post-grid__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.post-grid__tag {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -25px;
+}
+.post-grid__tag div {
+  position: absolute;
+  width: 136px;
+  height: 40px;
+  background: #FADA2B;
+  transform: skew(-15deg);
+}
+.post-grid__tag span {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F7F6F4;
+  z-index: 2;
+}
+.post-grid__content {
+  position: relative;
+  padding: 30px 35px;
+  top: -25px;
+}
+.post-grid__content > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+.post-grid__title {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #13120D;
+}
+.post-grid__time {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(19, 18, 13, 0.6352941176);
 }
 
 .footer {
