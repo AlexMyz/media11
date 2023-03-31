@@ -1,0 +1,131 @@
+.aside {
+  &__posts {}
+
+  &__interviews {}
+}
+
+.posts-aside {
+  &__post {
+    margin: 0 0 40px 0;
+  }
+}
+
+.post-aside {
+  &__link {
+    position: relative;
+  }
+
+  &__content{
+    position: relative;
+    z-index: 2;
+    padding: 165px 25px 20px 25px;
+    display: flex;
+  }
+
+  &__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 125%;
+    color: #F7F6F4;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.45);
+  }
+
+  &__arrow {}
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__separator {}
+}
+
+.interviews-aside {
+  &__title {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    color: #13120D;
+    margin: 0 0 23px 0;
+  }
+
+  &__interview {}
+}
+
+.interview-aside {
+  &:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__img {
+    margin: 0 20px 0 0;
+    position: relative;
+    flex: 0 0 37%;
+    min-height: 125px;
+
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 10px 40px 10px 0;
+  }
+
+  &__title {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #13120D;
+    margin: 0 0 13px 0;
+  }
+
+  &__duration {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #13120db2;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin: 0 10px 0 0;
+      border-left: 10px solid #13120db2;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+    }
+  }
+}
