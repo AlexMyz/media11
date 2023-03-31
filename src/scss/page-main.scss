@@ -277,11 +277,16 @@
 
 .social-main {
   display: flex;
+  align-items: center;
   padding: 30px 80px 30px 55px;
   background: rgba(250, 218, 43, 0.15);
   border-radius: 5px;
 
-  &__column {}
+  &__column {
+    &:not(:last-child) {
+      margin: 0 100px 0 0;
+    }
+  }
 
   &__title {
     font-family: 'Sen';
@@ -301,9 +306,19 @@
     line-height: 17px;
     color: #13120D;
     opacity: 0.7;
+
+    & p:not(:last-child) {
+      margin: 0 0 4px 0;
+    }
   }
 
-  &__link {}
+  &__link {
+    display: flex;
+
+    & li:not(:last-child) {
+      margin: 0 35px 0 0;
+    }
+  }
 }
 
 .post-list-grid {
