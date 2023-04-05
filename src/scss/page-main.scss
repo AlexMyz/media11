@@ -35,14 +35,33 @@
 
   &__poster {
     position: relative;
-    padding: 283px 230px 30px 0;
+    padding: 0 0 69% 0;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 5%;
   }
 
   &__tag {
     position: relative;
-    z-index: 2;
-    width: 190px;
+    display: inline-block;
+    min-width: 20%;
     padding: 5px 55px;
+    text-align: center;
+    margin: 0 0 30px 0;
+
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(30/20);
+    text-transform: uppercase;
+    color: #13120D;
+
+    @media (max-width: 767px) {
+      @include adaptiv-font(20, 13);
+    }
   
     & div {
       position: absolute;
@@ -50,18 +69,11 @@
       top: 0;
       left: 0;
       width: 100%;
-      border-top: 40px solid #FADA2B;
+      border-top: 2.1em solid #FADA2B;
       border-right: 10px solid transparent;
     }
   
     & span {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: uppercase;
-      color: #13120D;
       position: relative;
       z-index: 2;
     }
@@ -72,13 +84,20 @@
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
-    line-height: 59px;
+    line-height: calc(59/40);
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #FADA2B;
     position: relative;
     z-index: 2;
-    padding: 30px 0 0 40px;
+    padding: 0 40px;
+    width: 70%;
+
+    @media (max-width: 767px) {
+      @include adaptiv-font(40, 15);
+      width: 100%;
+      padding: 0 20px;
+    }
   }
 
   &__img {
@@ -177,12 +196,22 @@
 
 .post-single {
   display: flex;
+  gap: 40px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 
   &__img {
     position: relative;
     flex: 0 0 45%;
     min-height: 266px;
-    margin-right: 40px;
+
+    @media (max-width: 767px) {
+      flex: 0 0 100%;
+      padding: 0 0 69% 0;
+    }
   
     & img {
       position: absolute;
@@ -278,15 +307,18 @@
 .social-main {
   display: flex;
   align-items: center;
+  gap: 100px;
   padding: 30px 80px 30px 55px;
   background: rgba(250, 218, 43, 0.15);
   border-radius: 5px;
 
-  &__column {
-    &:not(:last-child) {
-      margin: 0 100px 0 0;
-    }
+  @media (max-width: 575px) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 50px 30px 50px;
   }
+
+  &__column {}
 
   &__title {
     font-family: 'Sen';
@@ -314,19 +346,31 @@
 
   &__link {
     display: flex;
+    gap: 35px;
 
-    & li:not(:last-child) {
-      margin: 0 35px 0 0;
+    @media (max-width: 1023px) {
+      flex-direction: column;
     }
+
+    @media (max-width: 575px) {
+      flex-direction: row;
+    }
+
   }
 }
 
 .post-list-grid {
   display: grid;
-  grid-template: 50% 50% / 50% 50%;
+  grid-template: 1fr 1fr / 1fr 1fr;
   grid-gap: 40px;
 
-  &__post-grid {}
+  @media (max-width: 767px) {
+    grid-template: auto / 1fr;
+  }
+
+
+  &__post-grid {
+  }
 }
 
 .post-grid {

@@ -1,15 +1,23 @@
 .page {
   flex: 1 1 auto;
-  padding: 35px 0 0 0;
+  padding: 225px 0 0 0;
 
   &__container {
     display: flex;
+    column-gap: 40px;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
+    
   }
 
   &__column {
-    &:not(:last-child) {
-      margin: 0 40px 0 0;
+
+    &:first-child {
+      flex: 0 0 66%;
     }
+
   }
 
 }

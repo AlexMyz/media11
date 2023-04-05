@@ -11,12 +11,23 @@
   &__main {
     display: flex;
     justify-content: space-around;
+    // gap: 50px;
+
+    @media (max-width: 767px) {
+      gap: 50px;
+      flex-direction: column;
+    }
+    
   }
 
   &__column {
 
     &:last-child {
       width: 385px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
 
   }
@@ -28,7 +39,15 @@
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin: 0 0 12px 0 ;
+
+    @media (max-width: 1023px) {
+      margin: 0 0 30px 0;
+    }
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__menu {
@@ -38,7 +57,17 @@
       & li {
 
         &:not(:last-child) {
-          margin-bottom: 10px;
+          margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 1023px) {
+          &:not(:last-child) {
+            margin: 0 0 30px 0;
+          }
+        }
+
+        @media (max-width: 767px) {
+          text-align: center;
         }
 
         & a {
@@ -49,6 +78,11 @@
           line-height: 19px;
           text-transform: capitalize;
           color: #F7F6F4;
+
+          &:hover {
+            text-decoration: underline;
+            color: #FADA2B;
+          }
         }
 
       }
@@ -95,11 +129,14 @@
 
     & ul {
       display: flex;
+      gap: 20px;
 
-      & li {
-        &:not(:last-child) {
-          margin-right: 12px;
-        }
+      @media (max-width: 1023px) {
+        gap: 50px;
+      }
+
+      @media (max-width: 767px) {
+        justify-content: center;
       }
 
     }
@@ -109,7 +146,13 @@
   &__bottom {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
     padding: 30px 0;
+
+    @media (max-width: 1023px) {
+      padding: 50px 0;
+    }
 
     & div {
       font-family: 'Sen';
@@ -117,10 +160,12 @@
       font-weight: 400;
       font-size: 12px;
       line-height: 14px;
+    }
 
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
 
