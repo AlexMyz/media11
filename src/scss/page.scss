@@ -2,6 +2,10 @@
   flex: 1 1 auto;
   padding: 225px 0 0 0;
 
+  @media (max-width: 767px) {
+      padding: 180px 0 0 0;
+    }
+
   &__container {
     display: flex;
     column-gap: 40px;

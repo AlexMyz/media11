@@ -50,6 +50,7 @@ const popups = () => {
   const popupClose = (popupActive, doUnLock = true) => {
     if (unlock) {
       popupActive.classList.remove('_open')
+      document.querySelector('.popup-search__form').reset()
       if (doUnLock) {
         bodyUnLock()
       }

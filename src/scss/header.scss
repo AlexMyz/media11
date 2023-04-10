@@ -25,6 +25,15 @@
 
   &__under {
     background-color: #13120D;
+
+    & .header__container {
+      @media (max-width: 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    
   }
 
   &__logo {
@@ -35,7 +44,7 @@
     z-index: 10;
 
     @media (max-width: 767px) {
-      padding: 10px 0 10px 0;
+      // padding: 10px 0 10px 0;
     }
   }
 
@@ -117,6 +126,10 @@
       overflow: auto;
       transition: all 0.3s ease 0s;
 
+      @media (max-width: 480px) {
+        padding: 175px 0 0 0;
+      }
+
       &::before {
         content: '';
         position: fixed;
@@ -126,6 +139,10 @@
         height: 165px;
         background: #13120D;
         z-index: 2;
+
+        @media (max-width: 480px) {
+          height: 135px;
+        }
       }
 
       &._active {
