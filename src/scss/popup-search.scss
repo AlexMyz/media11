@@ -1,0 +1,128 @@
+.popup {}
+
+.popup-search {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(19, 18, 13, 0.1);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+
+  &._open {
+    opacity: 1;
+    visibility: visible;
+
+    & .popup-search__field {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  &__field {
+    background: #FFFFFF;
+    padding: 22px 0 90px 0;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    transform: translate(0px, -100%);
+  }
+
+  &__body {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(30/20);
+    color: #13120D;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      padding: 0 15px 0 15px;
+    }
+
+    & > div {
+      margin: 0 50px 0 0;
+
+      @media (max-width: 767px) {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 161px;
+    max-height: 45px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    max-width: 540px;
+  }
+
+  &__form {
+    display: flex;
+    margin: 0 0 50px 0;
+
+    & button {
+      background: rgba(19, 18, 13, 0.05);
+      padding: 12px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    & input {
+      width: 100%;
+      background: rgba(19, 18, 13, 0.05);
+      font-size: inherit;
+      padding: 10px 15px 10px 15px;
+      border-radius: 0 5px 5px 0;
+
+      &::placeholder {
+        color: #13120D;
+        opacity: 0.25;
+      }
+    }
+    
+  }
+
+  &__results {
+
+  }
+
+  &__title {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24/16);
+    color: #13120D;
+    opacity: 0.35;
+    margin: 0 0 25px 0;
+  }
+
+  &__list {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(19/16);
+    color: #13120D;
+
+    & li:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__close {
+    padding: 12px 0 0 0;
+  }
+}

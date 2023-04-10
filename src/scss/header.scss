@@ -6,20 +6,20 @@
   z-index: 10;
   
   &__above {
-    display: flex;
-    justify-content: end;
-    padding: 10px 82px;
     background: #FFFFFF;
     position: relative;
-    // width: 100%;
-    // top: 0;
-    // left: 0;
     z-index: 10;
+  }
 
-    & a {
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
+  &__buttons {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    padding: 10px 82px;
+
+    @media (max-width: 767px) {
+      gap: 50px;
+      padding: 10px 20px;
     }
   }
 
@@ -32,8 +32,11 @@
     justify-content: center;
     padding: 21px 0 21px 0;
     position: relative;
-    
     z-index: 10;
+
+    @media (max-width: 767px) {
+      padding: 10px 0 10px 0;
+    }
   }
 
   &__menu {}
@@ -120,7 +123,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        height: 190px;
+        height: 165px;
         background: #13120D;
         z-index: 2;
       }

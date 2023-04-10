@@ -1,5 +1,7 @@
 import * as flsFunctions from "./modules/function.js";
 import burger from './modules/burger.js'
+import popups from "./modules/popups.js";
 
-burger()
 flsFunctions.isWebp()
+burger()
+popups()
